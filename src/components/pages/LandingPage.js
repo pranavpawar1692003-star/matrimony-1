@@ -389,6 +389,7 @@ function LandingPage({ onLoginSuccess }) {
                         <span style={styles.linkItem} onClick={() => navigate("#")}>About Us</span>
                         <span style={styles.linkItem} onClick={() => navigate("/privacy-policy")}>Privacy Policy</span>
                         <span style={styles.linkItem} onClick={() => navigate("/terms")}>Terms & Conditions</span>
+                        <span style={styles.linkItem} onClick={() => navigate("/child-safety")}>Child Safety</span>
                         <span style={styles.linkItem}>Careers</span>
                     </div>
                     <div>

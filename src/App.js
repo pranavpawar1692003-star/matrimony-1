@@ -11,6 +11,7 @@ import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 
 import LandingPage from "./components/pages/LandingPage";
 import TermsAndConditions from "./components/pages/TermsAndConditions";
+import ChildSafety from "./components/pages/ChildSafety";
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("Home");
@@ -65,7 +66,7 @@ function App() {
   // Redirect based on authentication status
   useEffect(() => {
     // List of public routes that don't need authentication
-    const publicRoutes = ["/", "/login", "/privacy-policy", "/terms"];
+    const publicRoutes = ["/", "/login", "/privacy-policy", "/terms", "/child-safety"];
 
     if (isAuthenticated && (location.pathname === "/login" || location.pathname === "/")) {
       navigate("/home");
@@ -135,6 +136,15 @@ function App() {
             </div>
           ) : (
             <TermsAndConditions />
+          )
+        } />
+        <Route path="/child-safety" element={
+          isAuthenticated ? (
+            <div className={`dashboard ${!isSidebarOpen ? 'sidebar-collapsed' : ''}`}>
+              <ChildSafety />
+            </div>
+          ) : (
+            <ChildSafety />
           )
         } />
 
