@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-    FiShield, FiHeart, FiLock, FiUser, FiX, FiCheckCircle,
-    FiSearch, FiMessageCircle, FiStar, FiInstagram, FiFacebook,
-    FiTwitter, FiArrowRight, FiSmartphone, FiUsers, FiAward,
+    FiShield, FiLock, FiUser, FiX, FiCheckCircle,
+    FiSearch, FiMessageCircle, FiInstagram, FiFacebook,
+    FiTwitter, FiArrowRight, FiSmartphone,
     FiEye, FiEyeOff
 } from "react-icons/fi";
 import { FaRing } from "react-icons/fa";

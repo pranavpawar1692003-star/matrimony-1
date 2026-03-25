@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { getDatabase, ref, get, query, orderByKey, startAfter, limitToFirst, remove } from "firebase/database";
 import { useNavigate, useLocation } from "react-router-dom";
-import { FiUser, FiLock, FiHeart, FiShield, FiX, FiMapPin, FiCalendar, FiArrowRight, FiInfo, FiCamera, FiTrash2, FiSearch, FiCheckCircle, FiEye, FiEyeOff } from "react-icons/fi";
+import { FiUser, FiLock, FiHeart, FiShield, FiX, FiMapPin, FiArrowRight, FiCamera, FiTrash2, FiSearch, FiCheckCircle, FiEye, FiEyeOff } from "react-icons/fi";
 
 function HomePage() {
     const [users, setUsers] = useState([]);
@@ -61,12 +61,7 @@ function HomePage() {
         return age;
     }, []);
 
-    const genderIcon = useCallback((gender) => {
-        if (!gender) return "👤";
-        if (gender.toLowerCase() === "male") return "👨";
-        if (gender.toLowerCase() === "female") return "👩";
-        return "👤";
-    }, []);
+
 
     const estimateTotalPages = useCallback(async () => {
         try {
@@ -683,16 +678,7 @@ function HomePage() {
         borderTopRightRadius: "16px",
     };
 
-    const placeholderImageStyle = {
-        ...userImageStyle,
-        backgroundColor: "#e5e7eb",
-        color: "#6b7280",
-        display: "none",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: isMobile ? "0.9rem" : "1rem",
-        fontWeight: "500",
-    };
+
 
     const userDetailsStyle = {
         padding: isMobile ? "16px" : "24px",
@@ -788,12 +774,7 @@ function HomePage() {
         backgroundColor: "#f3f4f6",
     };
 
-    const loadingPageButtonStyle = {
-        ...pageButtonStyle,
-        background: "linear-gradient(90deg, #f59e0b 0%, #f97316 100%)",
-        color: "#ffffff",
-        border: "2px solid #f59e0b",
-    };
+
 
     const ellipsisStyle = {
         padding: isMobile ? "8px 4px" : "10px 8px",
@@ -804,13 +785,7 @@ function HomePage() {
         textAlign: "center",
     };
 
-    const pageIndicatorStyle = {
-        textAlign: "center",
-        fontSize: isMobile ? "0.85rem" : "0.95rem",
-        color: "#475569",
-        margin: "16px 0",
-        fontWeight: "500",
-    };
+
 
     const searchContainerStyle = {
         display: "flex",
@@ -861,17 +836,7 @@ function HomePage() {
         width: "90%",
     };
 
-    const restoringIndicatorStyle = {
-        textAlign: "center",
-        fontSize: isMobile ? "0.85rem" : "0.9rem",
-        color: "#7c3aed",
-        fontWeight: "600",
-        padding: "8px 16px",
-        backgroundColor: "rgba(124, 58, 237, 0.1)",
-        borderRadius: "8px",
-        margin: "8px 0",
-        border: "1px solid rgba(124, 58, 237, 0.2)",
-    };
+
 
 
 
